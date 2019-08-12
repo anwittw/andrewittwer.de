@@ -37,7 +37,9 @@ export default function Home() {
 
   return (
     <div className="Home">
-    <pre>{JSON.stringify(stateActive, null, 2)}</pre>
+    {
+      //<pre>{JSON.stringify(stateActive, null, 2)}</pre>
+  }
       <Container className="my-5">
       <Row className="mb-4">
       <Col xs={{size:12}} md={{offset: 8, size:4}}> <Socials /> </Col>
