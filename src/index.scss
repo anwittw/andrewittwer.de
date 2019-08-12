@@ -1,0 +1,138 @@
+// --------------------
+// Overwrite variables
+
+// $primary: '';
+// $secondary: '';
+// $danger: '';
+// $warning: '';
+// $info: '';
+// $success: '';
+// $light:'';
+// $dark: '';
+
+//Nav Styling
+$navBackground: #229954;
+$navFontcolor: white;
+$navFontsize: 1.2rem;
+
+// --------------------
+// Import Bootstrap
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// --------------------
+// Import Fonts
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+ // @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+ @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap');
+
+
+ //variables
+
+ $globalShadow: 15px 15px 15px 8px rgba(179,179,179,1);
+
+
+// --------------------
+// Style reusable for all components
+body {
+  margin: 0;
+  padding: 0;
+  // font-family: sans-serif;
+  // font-family: 'Roboto', sans-serif;
+   //font-family: 'Montserrat', sans-serif;
+   font-family: 'Source Code Pro', monospace;
+}
+
+.App {
+}
+
+.Home {
+}
+
+.Home__Social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.Home__Social__Icon {
+  color: black;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.Home__Social__Icon:hover {
+  color: #229954;
+}
+
+.Home__Social__Label {
+  height: 36px;
+  padding: 5px;
+  margin: 0;
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+  border-radius: 3px;
+}
+
+.Home__Social__a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+.Home__Social__a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+
+
+.MyDetails {
+  background-color: $navBackground;
+  color:$navFontcolor;
+  height: 200px;
+}
+
+.MainNavbar {
+  box-shadow: $globalShadow;
+
+}
+
+.global-shadow{
+  box-shadow: $globalShadow;
+
+}
+
+.MainNavbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.MainNavbar__Element {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.MainNavbar__Element > * {
+  pointer-events: none;
+}
+
+.MainNavbar__Element:hover {
+  background-color: #229954;
+  color: white;
+}
+
+.MainNavbar__Icon {
+  font-size: 4.5rem;
+}
+
