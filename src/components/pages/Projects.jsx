@@ -8,7 +8,8 @@ export default function Projects() {
   console.log(ProjectsContent);
   return (
     <div className="Projects p-5">
-    <div class="card-columns">
+    <h1 className=" text-center mb-5">Handpicked Projects</h1>
+    <div className="card-columns">
       {ProjectsContent.map((project, i) => (
         <ProjectCard key={i} project={project} />
       ))}

@@ -18,7 +18,7 @@ export default function ProjectCard(props) {
     <div>
       <Card>
 
-      { props.project.img &&  <CardImg top width="80px" src={props.project.img} alt="Card image cap" /> }
+      { props.project.img &&  <CardImg top className="ProjectCard__Img" src={props.project.img} alt="Card image cap" /> }
         <CardBody>
           <CardTitle className="mb-3 font-weight-bold">
             {props.project.name}

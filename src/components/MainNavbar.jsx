@@ -13,21 +13,21 @@ export default function MainNavbar(props) {
     <div className="MainNavbar">
       <Container fluid className="m-0 p-0">
         <Row>
-          <Col>
-            <div id="resume"  onClick={(e) => props.handleClick(e)}className="MainNavbar__Element">
+          <Col className="pr-0">
+            <div id="details"  onClick={(e) => props.handleClick(e)}className="MainNavbar__Element">
               <span className="MainNavbar__Icon">
                 <FontAwesomeIcon icon={faAddressCard} />
               </span>
             </div>
           </Col>
-          <Col>
+          <Col className="px-0">
             <div id="projects" onClick={(e) => props.handleClick(e)} className="MainNavbar__Element">
               <span className="MainNavbar__Icon">
                 <FontAwesomeIcon icon={faBriefcase} />
               </span>
             </div>
           </Col>
-          <Col>
+          <Col className="pl-0">
             <div id="contact" onClick={(e) => props.handleClick(e)} className="MainNavbar__Element">
               <span className="MainNavbar__Icon">
                 <FontAwesomeIcon icon={faEnvelope} />

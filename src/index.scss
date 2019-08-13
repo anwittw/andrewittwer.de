@@ -18,22 +18,20 @@ $navFontsize: 1.2rem;
 // --------------------
 // Import Bootstrap
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // --------------------
 // Import Fonts
 
 // @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
- // @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
- @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap");
 
+//variables
 
- //variables
-
- $globalShadow: 15px 15px 15px 8px rgba(179,179,179,1);
-
+$globalShadow: 15px 15px 15px 8px rgba(179, 179, 179, 1);
 
 // --------------------
 // Style reusable for all components
@@ -42,8 +40,8 @@ body {
   padding: 0;
   // font-family: sans-serif;
   // font-family: 'Roboto', sans-serif;
-   //font-family: 'Montserrat', sans-serif;
-   font-family: 'Source Code Pro', monospace;
+  //font-family: 'Montserrat', sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 
 .App {
@@ -56,7 +54,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .Home__Social__Icon {
@@ -64,7 +61,6 @@ body {
   font-size: 2.5rem;
   display: flex;
   justify-content: space-around;
-
 }
 
 .Home__Social__Icon:hover {
@@ -93,25 +89,20 @@ body {
   cursor: auto;
 }
 
-
-
 .MyDetails {
   background-color: $navBackground;
-  color:$navFontcolor;
+  color: $navFontcolor;
   height: 200px;
 }
 
-
-.global-shadow{
+.global-shadow {
   box-shadow: $globalShadow;
-
 }
 
 .MainNavbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
 .MainNavbar__Element {
@@ -124,6 +115,11 @@ body {
 }
 
 .MainNavbar__Element:hover {
+  background-color: #229954;
+  color: white;
+}
+
+.MainNavbar__Element__active {
   background-color: #229954;
   color: white;
 }
@@ -155,4 +151,37 @@ body {
   text-decoration: inherit;
   color: inherit;
   cursor: auto;
+}
+
+.ProjectCard__Img {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+}
+
+.MyDetails {
+  height: 300px;
+  border-bottom: 5px solid white;
+  background-color: #229954;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.MyDetails__Col {
+  height: 300px;
+}
+
+.MyDetails__Img {
+  height: 200px;
+}
+
+.MyDetails__CallToAction {
+  text-decoration: underline
+
+}
+
+.MyDetails__CallToAction:hover {
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: black;
 }
