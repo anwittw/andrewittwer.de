@@ -72,9 +72,10 @@ export default function Home() {
     <div className="Home">
       {//<pre>{JSON.stringify(stateActive, null, 2)}</pre>
     }
-      <Container className="my-5">
+      <Container className="my-5 Home__Container">
         <Row className="mb-4">
-          <Col xs={{ size: 12 }} md={{ offset: 8, size: 4 }}>
+          <Col xs={{ size: 12 }} sm={{offset: 3, size: 9}} 
+          md={{ offset: 6, size: 6 }} lg={{ offset: 7, size: 5 }}>
             {" "}
             <Socials />{" "}
           </Col>
