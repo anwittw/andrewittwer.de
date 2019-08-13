@@ -14,7 +14,7 @@ export default function Contact() {
             <MapMe />
           </Col>
           <Col sm="12" md={{offset:1, size:7}} className="mt-4"><h3 className="text-muted">Or rather leave me your E-Mail!</h3>
-          <form name="contact" method="POST" data-netlify="true">
+          <form action="/" name="contact" method="POST" netlify>
           <FormGroup>
           <Label for="name">Name</Label>
           <Input type="text" name="name" id="name" placeholder="Your name" />
