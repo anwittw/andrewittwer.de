@@ -9,6 +9,7 @@ function encode(data) {
 }
 
 export default function ContactForm() {
+  const [stateSubmitMessage, setstateSubmitMessage] = useState(false)
   const [stateInput, setstateInput] = useState({
     name: "",
     email: "",
