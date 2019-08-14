@@ -15,8 +15,6 @@ export default function ContactForm() {
     reason: ""
   });
 
-  const [stateSubmitMessage, setstateSubmitMessage] = useState(false);
-
   function handleChange(e) {
     setstateInput({
       ...stateInput,
@@ -60,6 +58,7 @@ export default function ContactForm() {
             name="name"
             id="name"
             placeholder="Your name"
+            value={stateInput.name}
           />
         </FormGroup>
         <FormGroup>
@@ -71,6 +70,7 @@ export default function ContactForm() {
             name="email"
             id="email"
             placeholder="Your E-Mail"
+            value={stateInput.email}
           />
         </FormGroup>
         <FormGroup>
@@ -81,6 +81,7 @@ export default function ContactForm() {
             type="select"
             name="reason"
             id="reason"
+            value={stateInput.reason}
           >
             <option value="">-</option>
             <option value="Project Proposal">
