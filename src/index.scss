@@ -148,6 +148,13 @@ body {
   cursor: auto;
 }
 
+.ProjectCard__Social__a:hover {
+  text-decoration: inherit;
+  color: #229954;
+  cursor: auto;
+}
+
+
 .ProjectCard__Social__a:visited {
   text-decoration: inherit;
   color: inherit;
