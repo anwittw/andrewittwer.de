@@ -135,6 +135,23 @@ body {
   font-size: 4.5rem;
 }
 
+.Project__Badge {
+  margin: 8px;
+  background-color: black;
+  color: white;
+  text-decoration-line: line-through;
+}
+
+.Project__Badge__Active {
+  margin: 8px;
+  background-color: #229954; 
+  color: white;
+}
+
+
+
+
+
 .ProjectCard__Social {
   display: flex;
   justify-content: space-evenly;
