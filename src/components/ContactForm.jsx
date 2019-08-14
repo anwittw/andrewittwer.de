@@ -37,15 +37,15 @@ export default function ContactForm() {
   }
 
   function afterSubmit() {
-    setstateInput({
-      ...stateInput,
-      name: "",
-      email: "",
-      reason: ""
-    });
     setstateSubmitMessage(true);
     setTimeout(() => {
       setstateSubmitMessage(false);
+      setstateInput({
+        ...stateInput,
+        name: "",
+        email: "",
+        reason: ""
+      });
     }, 3000);
   }
 
