@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Input, FormGroup, Label, Button } from "reactstrap";
 
@@ -15,6 +15,8 @@ export default function ContactForm() {
     reason: ""
   });
 
+  const [stateSubmitMessage, setstateSubmitMessage] = useState(false);
+
   function handleChange(e) {
     setstateInput({
       ...stateInput,
@@ -29,14 +31,30 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...stateInput })
     })
-      .then(() => alert("Success!"))
+      .then(() => afterSubmit())
       .catch(error => alert(error));
+    afterSubmit();
+  }
+
+  function afterSubmit() {
+    setstateInput({
+      ...stateInput,
+      name: "",
+      email: "",
+      reason: ""
+    });
+    setstateSubmitMessage(true);
+    setTimeout(() => {
+      setstateSubmitMessage(false);
+    }, 3000);
   }
 
   return (
     <div className="ContactForm">
-      <h5>form values</h5>
-      <pre>{JSON.stringify(stateInput, null, 2)}</pre>
+      {
+        //   <h5>form values</h5>
+        // <pre>{JSON.stringify(stateInput, null, 2)}</pre>
+      }
       <form onSubmit={handleSubmit}>
         <input type="hidden" name="contact" value="contact" />
         <FormGroup>
@@ -78,10 +96,17 @@ export default function ContactForm() {
             <option value="Weather">I'd like to have a coffee with you.</option>
           </Input>
         </FormGroup>
-        <Button type="submit" className="mt-4 Contact__Button" block>
-          Submit
-        </Button>
+        {!stateSubmitMessage && (
+          <Button type="submit" className="mt-4 Contact__Button" block>
+            Submit
+          </Button>
+        )}
       </form>
+      {stateSubmitMessage && (
+        <div className="text-center ContactForm_SubmitMsg">
+          Thank you for your message - i will get in touch asap!
+        </div>
+      )}
     </div>
   );
 }
