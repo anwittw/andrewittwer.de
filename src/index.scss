@@ -81,19 +81,16 @@ body {
 .Home__Social__a:hover {
   text-decoration: inherit;
   color: #229954;
-  cursor: auto;
 }
 
 .Home__Social__a {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
 }
 
 .Home__Social__a:visited {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
 }
 
 .MyDetails {
@@ -115,6 +112,7 @@ body {
 .MainNavbar__Element {
   text-align: center;
   padding: 10px 0px;
+  cursor: pointer;
 }
 
 .MainNavbar__Element > * {
@@ -140,12 +138,14 @@ body {
   background-color: black;
   color: white;
   text-decoration-line: line-through;
+  cursor: pointer;
 }
 
 .Project__Badge__Active {
   margin: 8px;
   background-color: #229954; 
   color: white;
+  cursor: pointer;
 }
 
 
@@ -159,10 +159,12 @@ body {
 .ProjectCard__Social__Icon {
   color: black;
   font-size: 2.5rem;
+  
 }
 
 .ProjectCard__Social__Icon:hover {
   color: #229954;
+  cursor: pointer;
 }
 
 .ProjectCard__Social__a {
