@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Input, FormGroup, Label, Button } from "reactstrap";
 
@@ -9,7 +9,7 @@ function encode(data) {
 }
 
 export default function ContactForm() {
-  const [stateSubmitMessage, setstateSubmitMessage] = useState(false)
+  const [stateSubmitMessage, setstateSubmitMessage] = useState(false);
   const [stateInput, setstateInput] = useState({
     name: "",
     email: "",
@@ -44,10 +44,6 @@ export default function ContactForm() {
 
   return (
     <div className="ContactForm">
-      {
-        //   <h5>form values</h5>
-        // <pre>{JSON.stringify(stateInput, null, 2)}</pre>
-      }
       <form onSubmit={handleSubmit}>
         <input type="hidden" name="contact" value="contact" />
         <FormGroup>

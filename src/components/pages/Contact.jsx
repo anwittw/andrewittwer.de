@@ -1,18 +1,9 @@
 import React from "react";
 
 import MapMe from "../Map";
-import ContactForm from "../ContactForm"
+import ContactForm from "../ContactForm";
 
-import {
-  Container,
-  Row,
-  Col,
-  Input,
-  FormGroup,
-  Label,
-  Form,
-  Button
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 export default function Contact() {
   return (

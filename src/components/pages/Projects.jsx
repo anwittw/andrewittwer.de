@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ProjectsContent from "../../content/projects";
 import ProjectCard from "../ProjectCard";
 
@@ -13,7 +13,6 @@ export default function Projects() {
 
   function handleClick(e) {
     let element = e.target.id;
-    console.log(element);
     e.preventDefault();
     setstateTechs({
       ...stateTechs,
@@ -43,7 +42,9 @@ export default function Projects() {
           >
             <Badge
               className={
-                stateTechs.frontend ? "Project__Badge__Active" : "Project__Badge"
+                stateTechs.frontend
+                  ? "Project__Badge__Active"
+                  : "Project__Badge"
               }
               id="frontend"
               onClick={handleClick}
@@ -61,7 +62,9 @@ export default function Projects() {
             </Badge>
             <Badge
               className={
-                stateTechs.fullstack ? "Project__Badge__Active" : "Project__Badge"
+                stateTechs.fullstack
+                  ? "Project__Badge__Active"
+                  : "Project__Badge"
               }
               id="fullstack"
               onClick={handleClick}
@@ -70,7 +73,14 @@ export default function Projects() {
             </Badge>
           </Col>
         </Row>
-        { !stateTechs.frontend && !stateTechs.backend && !stateTechs.fullstack && <div><p className="Project__NoStack"> - Please Select at least one stack - </p></div> }
+        {!stateTechs.frontend && !stateTechs.backend && !stateTechs.fullstack && (
+          <div>
+            <p className="Project__NoStack">
+              {" "}
+              - Please Select at least one stack -{" "}
+            </p>
+          </div>
+        )}
         <div className="card-columns">
           {filterProjects(ProjectsContent, stateTechs).map((project, i) => (
             <ProjectCard key={i} project={project} />
