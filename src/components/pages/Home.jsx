@@ -79,7 +79,7 @@ export default function Home() {
                   handleClickContactMe={() => handleClickState("contact")}
                   handleClickPortfolio={() => handleClickState("projects")}
                 />
-              )}{" "}
+              )}
             </Col>
           </Row>
           <Row>

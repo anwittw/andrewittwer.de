@@ -22,19 +22,18 @@ export default function Projects() {
   }
 
   function filterProjects(projects, filters) {
-    let toShow = []
-    if(filters.frontend) toShow.push('frontend')
-    if(filters.backend) toShow.push('backend')
-    if(filters.fullstack) toShow.push('fullstack')
-    return projects.filter((project) => {
-      return toShow.includes(project.type)
-    })
+    let toShow = [];
+    if (filters.frontend) toShow.push("frontend");
+    if (filters.backend) toShow.push("backend");
+    if (filters.fullstack) toShow.push("fullstack");
+    return projects.filter(project => {
+      return toShow.includes(project.type);
+    });
   }
 
   return (
     <div className="Projects p-md-4">
       <Container>
-      
         <h1 className="mt-5 mb-2">Handpicked Projects</h1>
         <Row>
           <Col
@@ -42,21 +41,36 @@ export default function Projects() {
             sm="12"
             md={{ offset: 4, size: 4 }}
           >
-            {Object.keys(stateTechs).map(tech => (
-              <Badge
-                className={
-                  stateTechs[tech]
-                    ? "Project__Badge__Active"
-                    : "Project__Badge"
-                }
-                id={tech}
-                onClick={handleClick}
-              >
-                {tech}
-              </Badge>
-            ))}
+            <Badge
+              className={
+                stateTechs.frontend ? "Project__Badge__Active" : "Project__Badge"
+              }
+              id="frontend"
+              onClick={handleClick}
+            >
+              frontend
+            </Badge>
+            <Badge
+              className={
+                stateTechs.backend ? "Project__Badge__Active" : "Project__Badge"
+              }
+              id="backend"
+              onClick={handleClick}
+            >
+              backend
+            </Badge>
+            <Badge
+              className={
+                stateTechs.fullstack ? "Project__Badge__Active" : "Project__Badge"
+              }
+              id="fullstack"
+              onClick={handleClick}
+            >
+              fullstack
+            </Badge>
           </Col>
         </Row>
+        { !stateTechs.frontend && !stateTechs.backend && !stateTechs.fullstack && <div><p className="Project__NoStack"> - Please Select at least one stack - </p></div> }
         <div className="card-columns">
           {filterProjects(ProjectsContent, stateTechs).map((project, i) => (
             <ProjectCard key={i} project={project} />
