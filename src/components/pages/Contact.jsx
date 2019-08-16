@@ -15,7 +15,7 @@ export default function Contact() {
             <MapMe />
           </Col>
           <Col sm="12" md={{ offset: 1, size: 7 }} className="mt-4">
-            <h3 className="text-muted">Or rather leave me your mail here!</h3>
+            <h3 className="Contact__SubHeading">Or rather leave me your mail here!</h3>
             <ContactForm />
           </Col>
         </Row>
