@@ -85,7 +85,7 @@ export default function ContactForm() {
               Please contact me regarding a Project proposal.
             </option>
             <option value="Weather">How's the weather there?</option>
-            <option value="Weather">I'd like to have a coffee with you.</option>
+            <option value="Coffee">I'd like to have a coffee with you.</option>
           </Input>
         </FormGroup>
         {!stateSubmitMessage && (
