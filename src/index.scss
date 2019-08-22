@@ -44,8 +44,25 @@ body {
   font-family: "Source Code Pro", monospace;
 }
 
-.App {
+.App__Text {
+  opacity: 0.3;
 }
+
+.App__Text:hover {
+  opacity: 1;
+}
+
+.App__Links {
+  text-decoration: none;
+  color: black;
+}
+
+.App__Links:hover {
+  text-decoration: none;
+  color: #229954;
+}
+
+
 
 .Home__Container {
   border-radius: 5px;
@@ -248,5 +265,20 @@ color: black;
   .ContactForm_SubmitMsg {
     font-size: 1.1rem;
     color: #229954;
+  }
+
+  .Imprint__Back__Link:hover {
+    text-decoration: none;
+  }
+
+  .Imprint__Back {
+    border:none;
+    text-decoration: none;
+    color: white;
+    background-color: black
+  }
+
+  .Imprint__Back:hover {
+    background-color: #229954
   }
 

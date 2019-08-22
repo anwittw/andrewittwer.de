@@ -8,7 +8,7 @@ export default function MyDetails(props) {
       <Container>
         <Row>
           <Col className="text-center p-2 p-md-5" sm="12" md={{ size: 4 }}>
-            <img src="/me.jpg" className="MyDetails__Img rounded" />
+            <img src="/me.jpg" className="MyDetails__Img rounded" alt="myself" />
           </Col>
           <Col
             className="p-2 p-md-5 text-center"
