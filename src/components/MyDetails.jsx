@@ -22,7 +22,7 @@ export default function MyDetails(props) {
                 managing dynamic environments during scaling phase.
               </p>
               <p>
-                Looking for small and mid-sized Software projects either as part
+                Looking for small and mid-sized software projects either as part
                 of a bigger team or sole contractor.
               </p>
               <p>
