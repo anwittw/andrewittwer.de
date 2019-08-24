@@ -21,17 +21,17 @@ export default function Imprint() {
         <div className="global-shadow">
           <Row>
             <Col className="pt-5 px-5" md={{ size: 12 }}>
-              <h1 className="my-4">Impressum:</h1>
-              <h4 className="my-3">Anbieter:</h4>
+              <h1 className="my-4">Legal Notice:</h1>
+              <h4 className="my-3">Operator:</h4>
               <div className="pl-4">
                 Andre Wittwer <br />
                 Bergstraße 13 <br />
                 94513 Schönberg
               </div>
-              <h4 className="my-3">Kontakt:</h4>{" "}
-              <div className="pl-4">E-Mail: office at andrewittwer.de</div>{" "}
+              <h4 className="my-3">Contact:</h4>{" "}
+              <div className="pl-4">email: office at andrewittwer.de</div>{" "}
               <div className=" pl-4 my-5">
-                Umsatzsteuer-ID gem. § 27a UStG: DE323192214
+                VAT-ID according to § 27a UStG: DE323192214
               </div>
             </Col>
           </Row>
