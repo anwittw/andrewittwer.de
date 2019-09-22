@@ -16,6 +16,21 @@ export default function ContactForm() {
     reason: ""
   });
 
+  function handleForm() {
+    return fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ...stateInput })
+  });
+  }
+  
+  function handleMail() {
+    return fetch("/.netlify/functions/sendMail", {
+      method: "POST",
+      body: ""
+    });
+  }
+
   function handleChange(e) {
     setstateInput({
       ...stateInput,
@@ -25,11 +40,7 @@ export default function ContactForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...stateInput })
-    })
+    Promise.all([handleForm(), handleMail()])
       .then(() => afterSubmit())
       .catch(error => alert(error));
   }
