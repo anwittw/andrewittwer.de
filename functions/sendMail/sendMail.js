@@ -3,12 +3,15 @@ const mailjet = require("node-mailjet");
 const {template} = require("./template");
 
 exports.handler = function(event, context, callback) {
+  console.log('ping1');
+  console.log(process.env.REACT_APP_MJ_APIKEY_PUBLIC)
+
   
   let connectedMailjet = mailjet.connect(
     process.env.REACT_APP_MJ_APIKEY_PUBLIC,
-    "324d716729b40dca0263462158deac4f"
+    process.env.REACT_APP_MJ_APIKEY_PRIVATE
   );
-
+  console.log('ping2');
   connectedMailjet.post("send", { version: "v3.1" }).request(template)
     .then(result => {
       console.log(result.body);
