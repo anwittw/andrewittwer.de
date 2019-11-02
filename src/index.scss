@@ -282,3 +282,78 @@ color: black;
     background-color: #229954
   }
 
+
+  .detailAni-enter {
+    opacity: 0;
+  }
+  .detailAni-enter-active {
+    opacity: 1;
+    transition: 600ms;
+  }
+
+  .detailAni-enter-done {
+    opacity: 1;
+  }
+
+  .detailAni-exit {
+    opacity: 1;
+  }
+  .detailAni-exit-active {
+    opacity: 0;
+    transition: 600ms;
+  }
+
+  .detailAni-exit-done {
+    opacity: 0;
+    display: none;
+  }
+
+  .projectAni-enter {
+    opacity: 0;
+  }
+  .projectAni-enter-active {
+    opacity: 1;
+    transition: 600ms;
+  }
+
+  .projectAni-enter-done {
+    opacity: 1;
+  }
+
+  .projectAni-exit {
+    opacity: 1;
+  }
+  .projectAni-exit-active {
+    opacity: 0;
+    transition: 600ms;
+  }
+
+  .projectAni-exit-done {
+    opacity: 0;
+    display: none;
+  }
+
+  .contactAni-enter {
+    opacity: 0;
+  }
+  .contactAni-enter-active {
+    opacity: 1;
+    transition: 600ms;
+  }
+
+  .contactAni-enter-done {
+    opacity: 1;
+  }
+
+  .contactAni-exit {
+    opacity: 1;
+  }
+  .contactAni-exit-active {
+    opacity: 0;
+    transition: 600ms;
+  }
+
+  .contactAni-exit-done {
+    opacity: 0;
+    display: none;
+  }
