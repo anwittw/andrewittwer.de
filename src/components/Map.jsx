@@ -4,8 +4,8 @@ import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 mapboxgl.accessToken = process.env.REACT_APP_MB_ACCESS_TOKEN;
 
 export default function Map() {
-  const lat = -17.0807529;
-  const lng = 32.2636751;
+  const lat = -16.826747;
+  const lng = 32.652160;
 
   const [map, setMap] = useState({
     map: null,
