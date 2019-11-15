@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiYW53aXR0dyIsImEiOiJjanphN3ZpdTQwMTNlM3BxbGZ4aDdnNjdnIn0.M6RJRjhrRQTrT_07LYd-xw";
+mapboxgl.accessToken = process.env.REACT_APP_MB_ACCESS_TOKEN;
 
 export default function Map() {
-  const lat = -9.1374977;
-  const lng = 38.7222532;
+  const lat = -17.0807529;
+  const lng = 32.2636751;
 
   const [map, setMap] = useState({
     map: null,
