@@ -25,7 +25,7 @@ export default function Imprint() {
               <h4 className="my-3">Operator:</h4>
               <div className="pl-4">
                 Andre Wittwer <br />
-                Bergstraße 13 <br />
+                Dr. Josef-Ammer Str. 30 <br />
                 94513 Schönberg
               </div>
               <h4 className="my-3">Contact:</h4>{" "}
@@ -37,9 +37,10 @@ export default function Imprint() {
           </Row>
           <Row>
             <Col sm={{ offset: 2, size: 8 }}>
-            <Link className="Imprint__Back__Link" to="/"><Button className="my-4 Imprint__Back" block>
-               Back
-              </Button>
+              <Link className="Imprint__Back__Link" to="/">
+                <Button className="my-4 Imprint__Back" block>
+                  Back
+                </Button>
               </Link>
             </Col>
           </Row>
