@@ -4,18 +4,18 @@ import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 mapboxgl.accessToken = process.env.REACT_APP_MB_ACCESS_TOKEN;
 
 export default function Map() {
-  const lat = -16.826747;
-  const lng = 32.652160;
+  const lat = 13.4598068;
+  const lng = 48.5714014;
 
   const [map, setMap] = useState({
     map: null,
-    marker: null
+    marker: null,
   });
 
   useEffect(() => {
     setMap({
       ...map,
-      map: initMap(lng, lat)
+      map: initMap(lng, lat),
     });
   }, []);
 
@@ -24,7 +24,7 @@ export default function Map() {
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",
       center: [lat, lng],
-      zoom: 12
+      zoom: 12,
     });
   }
   function setMarker(lng, lat) {
